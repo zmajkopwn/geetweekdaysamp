@@ -1,0 +1,32 @@
+GetWeekDay(day=0, month=0, year=0)
+{
+  if (!day)
+    getdate(year, month, day);
+
+  new
+    j,
+    e
+  ;
+
+  if (month <= 2)
+  {
+    month += 12;
+    --year;
+  }
+
+  j = year % 100;
+  e = year / 100;
+
+  switch ((day + (month+1)*26/10 + j + j/4 + e/4 - 2*e) % 7)
+  {
+    case 0: danuned=0; //subota
+    case 1: danuned=1; //nedelja
+    case 2: danuned=2; //ponedeljak
+    case 3: danuned=3; //utorak
+    case 4: danuned=4; //sreda
+    case 5: danuned=5; //cetvrtak
+    case 6: danuned=6; //petak
+  }
+
+  return danuned;
+}
