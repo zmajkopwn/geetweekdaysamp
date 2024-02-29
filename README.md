@@ -1,0 +1,2 @@
+# geetweekdaysamp
+GetWeekDay
