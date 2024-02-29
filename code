@@ -1,3 +1,14 @@
+new danuned=-1;
+
+public OnGameModeInit() {
+
+  GetWeekDay();
+  printf("Danasnji dan: %d",danuned);
+
+}
+
+
+
 GetWeekDay(day=0, month=0, year=0)
 {
   if (!day)
